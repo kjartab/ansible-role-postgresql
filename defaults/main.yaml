@@ -1,0 +1,4 @@
+postgresql:
+  version:
+    major: 9
+    minor: 6
