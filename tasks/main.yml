@@ -14,6 +14,3 @@
     - postgresql-{{postgresql.version.major}}.{{postgresql.version.minor}}
     - postgresql-contrib-{{postgresql.version.major}}.{{postgresql.version.minor}}
     - postgresql-server-dev-{{postgresql.version.major}}.{{postgresql.version.minor}}
-  
-# - name: install packages
-#   apt: name=postgresql-9.5-postgis-2.2  state=present
