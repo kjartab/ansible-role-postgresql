@@ -14,3 +14,6 @@
     - postgresql-{{postgresql.version.major}}.{{postgresql.version.minor}}
     - postgresql-contrib-{{postgresql.version.major}}.{{postgresql.version.minor}}
     - postgresql-server-dev-{{postgresql.version.major}}.{{postgresql.version.minor}}
+
+- name: start postgresql
+  service: postgresql state=started enabled=yes
