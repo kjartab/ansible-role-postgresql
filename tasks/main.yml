@@ -1,12 +1,15 @@
 
 - name: Add repository
-  apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt trusty-pgdg main' state=present
+  apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt {{ansible_distribution_release}}-pgdg main' state=present
+
+- name: Add ubuntugis repository
+  apt_repository: repo='ppa:ubuntugis/ubuntugis-unstable' state=presents
 
 - name: Add key
   apt_key: url=http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc state=present
 
 - name: apt get update
-  apt: update_cache=yes
+  apt: item=sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable update_cache=yes
 
 - name: install packages
   apt: name={{item}} state=present
