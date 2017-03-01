@@ -19,4 +19,4 @@
     - postgresql-server-dev-{{postgresql.version.major}}.{{postgresql.version.minor}}
 
 - name: start postgresql
-  service: postgresql state=started enabled=yes
+  service: name=postgresql state=started enabled=yes
