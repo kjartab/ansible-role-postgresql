@@ -9,8 +9,8 @@
 - name: Add key
   apt_key: url=http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc state=present
 
-- name: apt get update
-  apt: item=sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable update_cache=yes
+# - name: apt get update
+#   apt: repo=ppa:ubuntugis/ubuntugis-unstable update_cache=yes
 
 - name: install packages
   apt: name={{item}} state=present
